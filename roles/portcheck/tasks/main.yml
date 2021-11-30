@@ -1,0 +1,18 @@
+---
+- name: Hello world
+  portcheck:
+
+- name: Hello, Ansible!
+  portcheck:
+    name: Ansible
+
+- name: Async Hello, World!
+  portcheck:
+  async: 1
+  poll: 1
+
+- name: Async Hello, Ansible!
+  portcheck:
+    name: Ansible
+  async: 1
+  poll: 1

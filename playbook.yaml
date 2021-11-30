@@ -1,0 +1,7 @@
+# Ansible playbook: Using custom ansible module written in golang
+---
+- hosts: all
+  gather_facts: true
+  become: no
+  roles:
+    - { role: portcheck, tags: ['tfa'] }
