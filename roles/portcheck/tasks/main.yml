@@ -1,18 +1,11 @@
 ---
-- name: Hello world
+- name: testing port 443 on server number 1 
   portcheck:
-
-- name: Hello, Ansible!
-  portcheck:
-    name: Ansible
-
-- name: Async Hello, World!
-  portcheck:
-  async: 1
-  poll: 1
-
-- name: Async Hello, Ansible!
-  portcheck:
-    name: Ansible
-  async: 1
-  poll: 1
+    name: portcheck
+    ssl: yes
+    target_port: 443
+    protocol: tcp
+    target_fqdn: test.example.com
+    spearedge_fqdn: portcheck.example.com
+    spearedge_path: spearedge
+    openshift_node: worker1.example.com
